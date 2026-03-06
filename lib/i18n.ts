@@ -103,111 +103,111 @@ export type SiteContent = {
 export const content: Record<Language, SiteContent> = {
   pt: {
     meta: {
-      title: "Vitor Martins | Portfolio Fullstack",
-      description: "Portfolio de Vitor Martins, desenvolvedor fullstack focado em produtos digitais."
+      title: "Vítor Martins | Portfolio Fullstack",
+      description: "Portfólio de ítor Martins, desenvolvedor fullstack focado em produtos digitais."
     },
     person: {
-      name: "Vitor Martins"
+      name: "Vítor Martins"
     },
     nav: {
-      home: "Inicio",
-      story: "Historia",
+      home: "Início",
+      story: "História",
       projects: "Projetos",
       process: "Processo",
       highlights: "Destaques",
       contact: "Contato",
-      languageAria: "Trocar idioma para ingles"
+      languageAria: "Trocar idioma para inglês"
     },
     hero: {
-      eyebrow: "Vitor Martins",
+      eyebrow: "Vítor Martins",
       title: "Onde ideias viram produto.",
       subtitle: "Desenvolvimento de produtos digitais em Mobile, Web e SaaS.",
       ctaProjects: "Ver projetos",
       ctaProfile: "GitHub / LinkedIn",
-      ctaProjectsAria: "Ir para a secao de projetos",
+      ctaProjectsAria: "Ir para a seção de projetos",
       ctaProfileAria: "Abrir perfil do GitHub ou LinkedIn",
       scrollHint: "Role",
-      scrollHintAria: "Rolar para a proxima secao"
+      scrollHintAria: "Rolar para a próxima seção"
     },
     sectionLabel: "Cena",
     sections: {
       story: {
-        title: "Minha historia",
+        title: "Minha história",
         description:
-          "Construo produtos digitais com visao de negocio e engenharia solida, mantendo velocidade sem perder clareza arquitetural.",
+          "Construo produtos digitais com visão de negocio e engenharia sólida, mantendo velocidade sem perder clareza arquitetural.",
         cards: [
           {
             title: "Base em produto e UX",
-            text: "Aprendi a construir conectando experiencia do usuario com viabilidade tecnica e impacto de negocio."
+            text: "Aprendi a construir conectando experiência do usuário com viabilidade tecnica e impacto de negocio."
           },
           {
             title: "De freela a construtor de sistemas",
-            text: "Sai de entregas pontuais para produtos completos com dados estruturados, fluxos operacionais e automacoes."
+            text: "Saí de entregas pontuais para produtos completos com dados estruturados, fluxos operacionais e automacoes."
           },
           {
-            title: "Foco atual: SaaS escalavel",
+            title: "Foco atual: SaaS escalável",
             text: "Projeto arquiteturas para crescimento, performance e manutencao no longo prazo."
           }
         ]
       },
       projects: {
         title: "Projetos",
-        description: "Produtos em mobile, web, educacao, e-commerce e SaaS B2B.",
+        description: "Produtos em mobile, web, educação, e-commerce e SaaS B2B.",
         caseStudy: "Estudo de caso",
         caseStudyAria: "Abrir estudo de caso",
         github: "GitHub",
-        githubAria: "Abrir repositorio no GitHub",
+        githubAria: "Abrir repositório no GitHub",
         privateStatus: "Projeto privado",
         viewAll: "Ver todos os projetos"
       },
       process: {
         title: "Como eu construo",
-        description: "Produto e processo. Iteracao rapida, decisoes tecnicas claras e foco no que gera impacto.",
+        description: "Produto e processo. Iteração rápida, decisões técnicas claras e foco no que gera impacto.",
         stepLabel: "Etapa",
         steps: [
-          "Discovery e mapeamento de restricoes",
-          "Arquitetura de UX e validacao tecnica rapida",
-          "Construcao iterativa com instrumentacao e metricas",
-          "Lancamento, monitoramento e melhoria continua"
+          "Discovery e mapeamento de restrições",
+          "Arquitetura de UX e validação técnica rápida",
+          "Construção iterativa com instrumentação e métricas",
+          "Lançamento, monitoramento e melhoria contínua"
         ]
       },
       highlights: {
-        title: "Destaques tecnicos",
-        description: "Arquiteturas para manter velocidade com seguranca e previsibilidade operacional.",
+        title: "Destaques técnicos",
+        description: "Arquiteturas para manter velocidade com segurança e previsibilidade operacional.",
         metricsTitle: "Indicadores",
         metrics: [
           { value: "10+", label: "Produtos desenvolvidos" },
-          { value: "4", label: "Dominios de produto" },
+          { value: "4", label: "Domínios de produto" },
           { value: "B2B", label: "Foco em SaaS" },
           { value: "UX", label: "Engenharia orientada a produto" }
         ],
         bullets: [
           "Arquitetura multi-tenant com isolamento claro",
-          "Politicas RLS para controle seguro de acesso",
+          "Políticas RLS para controle seguro de acesso",
           "Fluxos offline-first para uso em campo",
-          "Dashboards com metricas de produto e operacao",
-          "Automacoes para reduzir tarefas manuais"
+          "Dashboards com métricas de produto e operação",
+          "Automações para reduzir tarefas manuais"
         ]
       }
     },
     footer: {
       label: "Contato",
-      title: "Vamos construir algo.",
-      emailAria: "Enviar e-mail para Vitor Martins",
+      title: "Vamos construir algo?",
+      emailAria: "Enviar e-mail para Vítor Martins",
       github: "GitHub",
       linkedin: "LinkedIn",
       githubAria: "Abrir perfil do GitHub",
       linkedinAria: "Abrir perfil do LinkedIn",
-      copy: "Vitor Martins (c) 2026"
+      copy: "Vítor Martins (c) 2026"
     },
     progress: {
       label: "CENA"
     },
     caseStudy: {
-      overviewLabel: "Visao geral",
+      overviewLabel: "Visão geral",
       problemLabel: "Problema",
-      solutionLabel: "Solucao",
-      challengesLabel: "Desafios tecnicos",
+      solutionLabel: "Solução",
+      challengesLabel: "Desafios técnicos",
       architectureLabel: "Arquitetura",
       resultsLabel: "Resultados",
       learningsLabel: "Aprendizados",
@@ -215,14 +215,14 @@ export const content: Record<Language, SiteContent> = {
       backLabel: "Voltar para projetos",
       backHomeLabel: "Voltar para a pagina inicial",
       caseListTitle: "Estudos de caso",
-      caseListDescription: "Uma visao direta do problema, solucao e arquitetura de cada projeto.",
-      privateCodeLabel: "Codigo disponivel sob solicitacao",
+      caseListDescription: "Uma visão direta do problema, solucao e arquitetura de cada projeto.",
+      privateCodeLabel: "Código disponível sob solicitação",
       liveLabel: "Projeto online",
       repoLabel: "GitHub",
-      docsLabel: "Documentacao",
-      pipelineLabel: "Arquitetura tecnica",
-      navLabel: "Indice",
-      requestCodeLabel: "Disponivel sob solicitacao",
+      docsLabel: "Documentação",
+      pipelineLabel: "Arquitetura técnica",
+      navLabel: "Índice",
+      requestCodeLabel: "Disponível sob solicitação",
       topLabel: "Topo",
       productViewLabel: "Interface principal do produto",
       galleryLabel: "Galeria",
