@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #07090e;
+  color: #f5f7fa;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+}
+
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0.04;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.4) 1px, transparent 0);
+  background-size: 3px 3px;
+}
+
+.hero-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 28%, transparent 88%);
+}
+
+.hero-specular {
+  background: linear-gradient(112deg, transparent 30%, rgba(255, 255, 255, 0.16) 48%, transparent 66%);
+  background-size: 220% 100%;
+  animation: specularSweep 11s linear infinite;
+}
+
+.premium-card {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(8px);
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  isolation: isolate;
+}
+
+.premium-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.45), rgba(167, 139, 250, 0.28), rgba(52, 211, 153, 0.22));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.premium-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--x, 12%) var(--y, 4%), rgba(167, 139, 250, 0.18), transparent 46%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.34), 0 0 0 1px rgba(56, 189, 248, 0.14);
+}
+
+.premium-card:hover::after {
+  opacity: 1;
+}
+
+.premium-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.premium-card .specular {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(118deg, transparent 26%, rgba(255, 255, 255, 0.16) 47%, transparent 68%);
+  background-size: 220% 100%;
+  opacity: 0;
+  transition: opacity 260ms ease;
+  pointer-events: none;
+}
+
+.premium-card:hover .specular {
+  opacity: 1;
+  animation: specularSweep 1.3s ease;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+@keyframes specularSweep {
+  0% {
+    background-position-x: 130%;
+  }
+  100% {
+    background-position-x: -120%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-specular {
+    animation: none !important;
+  }
+}
