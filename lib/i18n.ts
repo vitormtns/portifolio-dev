@@ -93,133 +93,141 @@ export type SiteContent = {
     navLabel: string;
     requestCodeLabel: string;
     topLabel: string;
+    productViewLabel: string;
+    galleryLabel: string;
+    openImageLabel: string;
+    closeImageLabel: string;
   };
 };
 
 export const content: Record<Language, SiteContent> = {
   pt: {
     meta: {
-      title: "Vítor Martins | Portfólio Fullstack",
-      description: "Portfólio de Vítor Martins, desenvolvedor fullstack focado em produtos digitais."
+      title: "Vitor Martins | Portfolio Fullstack",
+      description: "Portfolio de Vitor Martins, desenvolvedor fullstack focado em produtos digitais."
     },
     person: {
-      name: "Vítor Martins"
+      name: "Vitor Martins"
     },
     nav: {
-      home: "Início",
-      story: "História",
+      home: "Inicio",
+      story: "Historia",
       projects: "Projetos",
       process: "Processo",
       highlights: "Destaques",
       contact: "Contato",
-      languageAria: "Trocar idioma para inglês"
+      languageAria: "Trocar idioma para ingles"
     },
     hero: {
-      eyebrow: "Vítor Martins",
+      eyebrow: "Vitor Martins",
       title: "Onde ideias viram produto.",
       subtitle: "Desenvolvimento de produtos digitais em Mobile, Web e SaaS.",
       ctaProjects: "Ver projetos",
       ctaProfile: "GitHub / LinkedIn",
-      ctaProjectsAria: "Ir para a seção de projetos",
+      ctaProjectsAria: "Ir para a secao de projetos",
       ctaProfileAria: "Abrir perfil do GitHub ou LinkedIn",
       scrollHint: "Role",
-      scrollHintAria: "Rolar para a próxima seção"
+      scrollHintAria: "Rolar para a proxima secao"
     },
     sectionLabel: "Cena",
     sections: {
       story: {
-        title: "Minha história",
+        title: "Minha historia",
         description:
-          "Construo produtos digitais com visão de negócio e engenharia sólida, mantendo velocidade de desenvolvimento sem perder clareza arquitetural.",
+          "Construo produtos digitais com visao de negocio e engenharia solida, mantendo velocidade sem perder clareza arquitetural.",
         cards: [
           {
             title: "Base em produto e UX",
-            text: "Aprendi a construir conectando experiência do usuário com viabilidade técnica e impacto real no negócio."
+            text: "Aprendi a construir conectando experiencia do usuario com viabilidade tecnica e impacto de negocio."
           },
           {
             title: "De freela a construtor de sistemas",
-            text: "Saí de entregas pontuais para desenvolver produtos completos, com dados estruturados, fluxos operacionais e automações."
+            text: "Sai de entregas pontuais para produtos completos com dados estruturados, fluxos operacionais e automacoes."
           },
           {
-            title: "Foco atual: SaaS escalável",
-            text: "Projeto arquiteturas pensadas para crescimento, performance e manutenção no longo prazo."
+            title: "Foco atual: SaaS escalavel",
+            text: "Projeto arquiteturas para crescimento, performance e manutencao no longo prazo."
           }
         ]
       },
       projects: {
         title: "Projetos",
-        description: "Produtos desenvolvidos em mobile, web, educação, e-commerce e SaaS B2B.",
+        description: "Produtos em mobile, web, educacao, e-commerce e SaaS B2B.",
         caseStudy: "Estudo de caso",
         caseStudyAria: "Abrir estudo de caso",
         github: "GitHub",
-        githubAria: "Abrir repositório no GitHub",
+        githubAria: "Abrir repositorio no GitHub",
         privateStatus: "Projeto privado",
         viewAll: "Ver todos os projetos"
       },
       process: {
         title: "Como eu construo",
-        description: "Construção de produto é um processo. Iteração rápida, decisões técnicas claras e foco no que realmente gera impacto.",
+        description: "Produto e processo. Iteracao rapida, decisoes tecnicas claras e foco no que gera impacto.",
         stepLabel: "Etapa",
         steps: [
-          "Discovery e mapeamento de restrições do produto",
-          "Arquitetura de UX e validação técnica rápida",
-          "Construção iterativa com instrumentação e métricas",
-          "Lançamento, monitoramento e melhoria contínua"
+          "Discovery e mapeamento de restricoes",
+          "Arquitetura de UX e validacao tecnica rapida",
+          "Construcao iterativa com instrumentacao e metricas",
+          "Lancamento, monitoramento e melhoria continua"
         ]
       },
       highlights: {
-        title: "Destaques técnicos",
-        description: "Arquiteturas pensadas para manter velocidade de desenvolvimento com segurança e previsibilidade operacional.",
+        title: "Destaques tecnicos",
+        description: "Arquiteturas para manter velocidade com seguranca e previsibilidade operacional.",
         metricsTitle: "Indicadores",
         metrics: [
           { value: "10+", label: "Produtos desenvolvidos" },
-          { value: "4", label: "Domínios de produto" },
+          { value: "4", label: "Dominios de produto" },
           { value: "B2B", label: "Foco em SaaS" },
           { value: "UX", label: "Engenharia orientada a produto" }
         ],
         bullets: [
-          "Arquitetura multi-tenant com isolamento claro entre clientes",
-          "Políticas RLS para controle seguro de acesso aos dados",
+          "Arquitetura multi-tenant com isolamento claro",
+          "Politicas RLS para controle seguro de acesso",
           "Fluxos offline-first para uso em campo",
-          "Dashboards com métricas de produto e operação",
-          "Automações para reduzir tarefas manuais"
+          "Dashboards com metricas de produto e operacao",
+          "Automacoes para reduzir tarefas manuais"
         ]
       }
     },
     footer: {
       label: "Contato",
       title: "Vamos construir algo.",
-      emailAria: "Enviar e-mail para Vítor Martins",
+      emailAria: "Enviar e-mail para Vitor Martins",
       github: "GitHub",
       linkedin: "LinkedIn",
       githubAria: "Abrir perfil do GitHub",
       linkedinAria: "Abrir perfil do LinkedIn",
-      copy: "Vítor Martins © 2026"
+      copy: "Vitor Martins (c) 2026"
     },
     progress: {
       label: "CENA"
     },
     caseStudy: {
-      overviewLabel: "Visão geral",
+      overviewLabel: "Visao geral",
       problemLabel: "Problema",
-      solutionLabel: "Solução",
-      challengesLabel: "Desafios técnicos",
+      solutionLabel: "Solucao",
+      challengesLabel: "Desafios tecnicos",
       architectureLabel: "Arquitetura",
       resultsLabel: "Resultados",
       learningsLabel: "Aprendizados",
       linksLabel: "Links",
       backLabel: "Voltar para projetos",
-      backHomeLabel: "Voltar para a página inicial",
+      backHomeLabel: "Voltar para a pagina inicial",
       caseListTitle: "Estudos de caso",
-      caseListDescription: "Uma visão direta do problema, solução e arquitetura de cada projeto.",
-      privateCodeLabel: "Código disponível sob solicitação",
+      caseListDescription: "Uma visao direta do problema, solucao e arquitetura de cada projeto.",
+      privateCodeLabel: "Codigo disponivel sob solicitacao",
       liveLabel: "Projeto online",
       repoLabel: "GitHub",
-      docsLabel: "Documentação",
-      pipelineLabel: "Arquitetura técnica",
-      navLabel: "Índice",
-      requestCodeLabel: "Disponível sob solicitação",
-      topLabel: "Topo"
+      docsLabel: "Documentacao",
+      pipelineLabel: "Arquitetura tecnica",
+      navLabel: "Indice",
+      requestCodeLabel: "Disponivel sob solicitacao",
+      topLabel: "Topo",
+      productViewLabel: "Interface principal do produto",
+      galleryLabel: "Galeria",
+      openImageLabel: "Abrir imagem",
+      closeImageLabel: "Fechar imagem"
     }
   },
   en: {
@@ -259,7 +267,7 @@ export const content: Record<Language, SiteContent> = {
         cards: [
           {
             title: "Product and UX foundation",
-            text: "I learned to ship by linking user experience decisions to technical feasibility and business outcomes."
+            text: "I learned to ship by linking UX decisions to technical feasibility and business outcomes."
           },
           {
             title: "From freelance to systems builder",
@@ -267,7 +275,7 @@ export const content: Record<Language, SiteContent> = {
           },
           {
             title: "Current focus: scalable SaaS",
-            text: "I design resilient architectures built for growth, performance, and long-term maintainability."
+            text: "I design resilient architectures built for growth, performance, and maintainability."
           }
         ]
       },
@@ -344,7 +352,11 @@ export const content: Record<Language, SiteContent> = {
       pipelineLabel: "Technical pipeline",
       navLabel: "Index",
       requestCodeLabel: "Available upon request",
-      topLabel: "Top"
+      topLabel: "Top",
+      productViewLabel: "Main product interface",
+      galleryLabel: "Gallery",
+      openImageLabel: "Open image",
+      closeImageLabel: "Close image"
     }
   }
 };

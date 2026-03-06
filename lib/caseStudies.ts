@@ -56,6 +56,10 @@ export type CaseStudy = {
     repo?: string;
     docs?: string;
   };
+  media?: {
+    cover?: boolean;
+    gallery?: number;
+  };
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -166,7 +170,8 @@ export const caseStudies: CaseStudy[] = [
         ]
       }
     },
-    links: {}
+    links: {},
+    media: { cover: true, gallery: 6 }
   },
 
   {
@@ -269,7 +274,8 @@ export const caseStudies: CaseStudy[] = [
         en: ["Pragmatic WordPress engineering with security, performance, and maintainability in focus"]
       }
     },
-    links: {}
+    links: {},
+    media: { cover: true, gallery: 6 }
   },
 
   {
@@ -369,7 +375,8 @@ export const caseStudies: CaseStudy[] = [
         en: ["UX and performance optimization in WooCommerce without Pro builders"]
       }
     },
-    links: {}
+    links: {},
+    media: { cover: true, gallery: 6 }
   },
 
   {
@@ -467,7 +474,8 @@ export const caseStudies: CaseStudy[] = [
         en: ["Security and modeling are core levers for scalable B2B SaaS"]
       }
     },
-    links: {}
+    links: {},
+    media: { cover: true, gallery: 6 }
   }
 ];
 

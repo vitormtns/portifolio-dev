@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
+import CaseMedia from "@/components/CaseMedia";
 import type { CaseStudy } from "@/lib/caseStudies";
 import type { Language, SiteContent } from "@/lib/i18n";
 
@@ -53,7 +54,9 @@ export default function CaseHero({ caseStudy, lang, t, reducedMotion }: CaseHero
           ))}
         </div>
 
-        <div className="premium-card mt-9 rounded-2xl p-5 sm:p-6">
+        <CaseMedia title={caseStudy.title[lang]} slug={caseStudy.slug} lang={lang} media={caseStudy.media} t={t} reducedMotion={reducedMotion} />
+
+        <div className="premium-card mt-10 rounded-2xl p-5 sm:p-6">
           <span aria-hidden="true" className="specular" />
           <p className="text-[11px] uppercase tracking-[0.24em] text-accent-blue/90">{t.caseStudy.linksLabel}</p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm">
