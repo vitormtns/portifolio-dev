@@ -21,7 +21,7 @@ export default function Footer({ t }: FooterProps) {
         </div>
         <div className="space-y-2 text-sm text-white/70">
           <a
-            href="https://github.com/"
+            href="https://github.com/vitormtns"
             target="_blank"
             rel="noreferrer"
             aria-label={t.footer.githubAria}
@@ -30,7 +30,7 @@ export default function Footer({ t }: FooterProps) {
             {t.footer.github}
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/vitormtns/"
             target="_blank"
             rel="noreferrer"
             aria-label={t.footer.linkedinAria}
