@@ -2,6 +2,7 @@ import { caseStudies, type CaseStudyStatus, type CaseStudySlug } from "@/lib/cas
 
 export type Project = {
   slug: CaseStudySlug;
+  featured: boolean;
   title: {
     pt: string;
     en: string;
@@ -14,9 +15,12 @@ export type Project = {
 
 export const projects: Project[] = caseStudies.map((caseStudy) => ({
   slug: caseStudy.slug,
+  featured: caseStudy.featured,
   title: caseStudy.title,
   stack: caseStudy.stackBadges,
   status: caseStudy.status,
   caseStudyUrl: `/projects/${caseStudy.slug}`,
   githubUrl: caseStudy.links.repo
 }));
+
+export const featuredProjects = projects.filter((project) => project.featured);

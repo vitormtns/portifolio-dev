@@ -71,7 +71,7 @@ export default function Hero({ t, reducedMotion }: HeroProps) {
             {t.hero.ctaProjects}
           </a>
           <a
-            href="https://github.com/"
+            href="https://github.com/vitormtns"
             target="_blank"
             rel="noreferrer"
             aria-label={t.hero.ctaProfileAria}

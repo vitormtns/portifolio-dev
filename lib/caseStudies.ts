@@ -1,4 +1,11 @@
-export type CaseStudySlug = "bovnex" | "beta-for-business" | "dolmini" | "beta-for-teams";
+export type CaseStudySlug =
+  | "nexus-backend"
+  | "nexus-frontend"
+  | "fogacas-lanchonete"
+  | "bovnex"
+  | "beta-for-business"
+  | "dolmini"
+  | "beta-for-teams";
 
 export type CaseStudyStatus = "private" | "public" | "partial";
 
@@ -30,6 +37,7 @@ type PipelineDiagram = {
 
 export type CaseStudy = {
   slug: CaseStudySlug;
+  featured: boolean;
   title: LocalizedText;
   tagline: LocalizedText;
   status: CaseStudyStatus;
@@ -64,7 +72,389 @@ export type CaseStudy = {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "nexus-backend",
+    featured: true,
+    title: { pt: "Nexus Backend Test", en: "Nexus Backend Test" },
+    tagline: {
+      pt: "API backend para operações financeiras com autenticação, transações e integração externa.",
+      en: "A backend API for financial operations with authentication, transactions, and external integration."
+    },
+    status: "partial",
+    stackBadges: ["Node.js", "TypeScript", "API REST", "PostgreSQL", "Auth", "Financial Logic", "External API"],
+    heroTheme: { from: "#0B1320", to: "#182335", accent: "rgba(94, 155, 255, 0.26)" },
+    overview: {
+      pt: "Teste técnico backend focado em construir uma API funcional para operações financeiras, com autenticação, controle de saldo, transações e integração com serviço externo de cotação.",
+      en: "Backend technical test focused on building a functional API for financial operations, including authentication, balance control, transactions, and external quotation service integration."
+    },
+    sections: {
+      problem: {
+        pt: {
+          paragraph:
+            "O desafio era estruturar uma API clara e confiável para simular operações financeiras, mantendo regras de negócio consistentes e boa organização da aplicação.",
+          bullets: [
+            "Necessidade de autenticação e controle de acesso",
+            "Operações financeiras com validação de saldo",
+            "Integração com cotação externa para conversão de ativos",
+            "Estrutura organizada para teste técnico e deploy"
+          ]
+        },
+        en: {
+          paragraph:
+            "The challenge was to structure a clear and reliable API to simulate financial operations while keeping the business rules consistent and the application well organized.",
+          bullets: [
+            "Authentication and access control requirements",
+            "Financial operations with balance validation",
+            "External quotation integration for asset conversion",
+            "An organized structure for the technical test and deployment"
+          ]
+        }
+      },
+      solution: {
+        pt: [
+          "API com autenticação e rotas protegidas",
+          "Operações de depósito, saque e conversão de ativos",
+          "Histórico de transações com leitura clara dos dados",
+          "Deploy funcional para demonstração em produção"
+        ],
+        en: [
+          "API with authentication and protected routes",
+          "Deposit, withdrawal, and asset conversion operations",
+          "Transaction history with clear data visibility",
+          "A working production deployment for demonstration"
+        ]
+      },
+      challenges: {
+        pt: [
+          "Garantir consistência nas regras de saldo e transação",
+          "Integrar serviço externo sem comprometer a estrutura da aplicação",
+          "Manter o projeto legível para avaliação técnica",
+          "Equilibrar velocidade de entrega com organização de código"
+        ],
+        en: [
+          "Keeping balance and transaction rules consistent",
+          "Integrating an external service without weakening the application structure",
+          "Keeping the project readable for technical evaluation",
+          "Balancing delivery speed with code organization"
+        ]
+      },
+      architecture: {
+        bullets: {
+          pt: [
+            "Camada de API organizada por responsabilidades",
+            "Persistência de dados com banco relacional",
+            "Integração externa encapsulada para cotações",
+            "Fluxo de autenticação desacoplado da lógica financeira"
+          ],
+          en: [
+            "API layer organized by responsibility",
+            "Relational database persistence",
+            "Encapsulated external integration for quotations",
+            "Authentication flow decoupled from the financial logic"
+          ]
+        },
+        pipeline: {
+          nodes: [
+            { pt: "API", en: "API" },
+            { pt: "Serviços", en: "Services" },
+            { pt: "Banco de dados", en: "Database" },
+            { pt: "API externa de cotações", en: "External Quotes API" }
+          ],
+          edges: [
+            [0, 1],
+            [1, 2],
+            [1, 3]
+          ]
+        }
+      },
+      results: {
+        pt: [
+          "API funcional com autenticação e operações principais implementadas",
+          "Deploy em produção para avaliação técnica",
+          "Base consistente para demonstrar lógica backend"
+        ],
+        en: [
+          "Working API with authentication and core operations implemented",
+          "Production deployment for technical evaluation",
+          "A consistent base to demonstrate backend logic"
+        ]
+      },
+      learnings: {
+        pt: [
+          "Testes técnicos também exigem boa comunicação de arquitetura",
+          "Organização da regra de negócio pesa tanto quanto a funcionalidade",
+          "Deploy funcional aumenta muito a percepção de entrega"
+        ],
+        en: [
+          "Technical tests also demand clear architectural communication",
+          "Business rule organization matters as much as functionality",
+          "A working deployment strongly improves delivery perception"
+        ]
+      }
+    },
+    links: {
+      repo: "https://github.com/vitormtns/testenexus_backend",
+      live: "https://testenexus-backend.vercel.app/",
+      docs: "#"
+    },
+    media: { cover: true, gallery: 2 }
+  },
+  {
+    slug: "nexus-frontend",
+    featured: true,
+    title: { pt: "Nexus Frontend Test", en: "Nexus Frontend Test" },
+    tagline: {
+      pt: "Dashboard frontend para operações financeiras com foco em clareza visual e integração com API.",
+      en: "A frontend dashboard for financial operations focused on visual clarity and API integration."
+    },
+    status: "partial",
+    stackBadges: ["React", "TypeScript", "Vite", "TailwindCSS", "Dashboard UI", "API Integration", "Responsive Design"],
+    heroTheme: { from: "#12182C", to: "#241B3A", accent: "rgba(126, 115, 255, 0.22)" },
+    overview: {
+      pt: "Teste técnico frontend voltado para construir uma interface clara e responsiva para operações financeiras, com foco em experiência de uso e integração com dados reais.",
+      en: "Frontend technical test focused on building a clear and responsive interface for financial operations, with emphasis on usability and real API integration."
+    },
+    sections: {
+      problem: {
+        pt: {
+          paragraph:
+            "O objetivo era transformar fluxos financeiros em uma interface simples de navegar, mantendo feedback visual claro e boa leitura dos dados.",
+          bullets: [
+            "Dashboard precisava ser direto e compreensível",
+            "Integração com API para exibir dados e operações",
+            "Fluxos de depósito, saque e histórico em uma interface coesa",
+            "Necessidade de responsividade e boa experiência visual"
+          ]
+        },
+        en: {
+          paragraph:
+            "The goal was to turn financial flows into an interface that felt easy to navigate while keeping visual feedback clear and the data easy to read.",
+          bullets: [
+            "The dashboard needed to feel direct and understandable",
+            "API integration to display data and operations",
+            "Deposit, withdrawal, and history flows in one cohesive interface",
+            "Responsiveness and strong visual usability were required"
+          ]
+        }
+      },
+      solution: {
+        pt: [
+          "Dashboard com indicadores, saldos e operações centralizadas",
+          "Integração com API para cotações e transações",
+          "Histórico de transações com leitura amigável",
+          "Layout responsivo com foco em clareza"
+        ],
+        en: [
+          "Dashboard with centralized indicators, balances, and operations",
+          "API integration for quotations and transactions",
+          "Transaction history with user-friendly readability",
+          "Responsive layout focused on clarity"
+        ]
+      },
+      challenges: {
+        pt: [
+          "Traduzir fluxos financeiros em UX simples",
+          "Manter consistência visual entre telas e estados",
+          "Exibir feedback de erro, sucesso e carregamento com clareza",
+          "Organizar a interface para avaliação técnica rápida"
+        ],
+        en: [
+          "Translating financial flows into simple UX",
+          "Maintaining visual consistency across screens and states",
+          "Showing error, success, and loading feedback clearly",
+          "Organizing the interface for quick technical evaluation"
+        ]
+      },
+      architecture: {
+        bullets: {
+          pt: [
+            "Frontend em componentes reutilizáveis",
+            "Camada de integração com API separada da apresentação",
+            "Gerenciamento de estado focado em simplicidade",
+            "Estrutura responsiva orientada a dashboard"
+          ],
+          en: [
+            "Frontend built with reusable components",
+            "API integration layer separated from presentation",
+            "State management focused on simplicity",
+            "Responsive structure tailored to dashboard usage"
+          ]
+        },
+        pipeline: {
+          nodes: [
+            { pt: "UI", en: "UI" },
+            { pt: "Componentes", en: "Components" },
+            { pt: "Camada de API", en: "API Layer" },
+            { pt: "Backend API", en: "Backend API" }
+          ],
+          edges: [
+            [0, 1],
+            [1, 2],
+            [2, 3]
+          ]
+        }
+      },
+      results: {
+        pt: [
+          "Dashboard funcional e integrado com API",
+          "Interface clara para demonstrar raciocínio de front-end",
+          "Projeto pronto para deploy e avaliação"
+        ],
+        en: [
+          "Working dashboard integrated with the API",
+          "Clear interface to demonstrate front-end thinking",
+          "Project ready for deployment and evaluation"
+        ]
+      },
+      learnings: {
+        pt: [
+          "Boa UI em teste técnico depende mais de clareza do que de excesso visual",
+          "Integração real com API eleva bastante a qualidade percebida",
+          "Responsividade bem resolvida faz diferença na apresentação"
+        ],
+        en: [
+          "Good UI in a technical test depends more on clarity than visual excess",
+          "Real API integration raises perceived quality significantly",
+          "Well-resolved responsiveness improves the presentation"
+        ]
+      }
+    },
+    links: {
+      repo: "https://github.com/vitormtns/testenexus_frontend",
+      live: "https://testenexus-frontend.vercel.app/home",
+      docs: "#"
+    },
+    media: { cover: true, gallery: 2 }
+  },
+  {
+    slug: "fogacas-lanchonete",
+    featured: true,
+    title: { pt: "Sistema de Lanchonete do Fogaça’s", en: "Fogaça’s Snack Bar System" },
+    tagline: {
+      pt: "Sistema para gestão de pedidos, produtos e operação de lanchonete com foco em uso real.",
+      en: "A system for managing orders, products, and snack bar operations with a focus on real-world usage."
+    },
+    status: "private",
+    stackBadges: ["React", "TypeScript", "PostgreSQL", "Order Management", "Product Catalog", "Real Workflow", "Admin Interface"],
+    heroTheme: { from: "#181412", to: "#2A2526", accent: "rgba(255, 167, 93, 0.18)" },
+    overview: {
+      pt: "Sistema desenvolvido para atender uma necessidade real de operação em lanchonete, estruturando produtos, variações e fluxo de pedidos de forma mais prática.",
+      en: "A system built to support a real snack bar operation, structuring products, variations, and the ordering flow in a more practical way."
+    },
+    sections: {
+      problem: {
+        pt: {
+          paragraph:
+            "A operação precisava de mais organização para lidar com produtos, categorias, variações e pedidos sem depender de processos manuais desestruturados.",
+          bullets: [
+            "Cadastro de categorias e produtos com organização clara",
+            "Necessidade de lidar com variações e opções de pedido",
+            "Fluxo de operação mais prático para uso no dia a dia",
+            "Estrutura pensada para crescer sem virar bagunça"
+          ]
+        },
+        en: {
+          paragraph:
+            "The operation needed more structure to handle products, categories, variations, and orders without relying on messy manual processes.",
+          bullets: [
+            "Clear organization for categories and product registration",
+            "Need to handle variations and order options",
+            "A more practical day-to-day operational flow",
+            "A structure designed to grow without becoming chaotic"
+          ]
+        }
+      },
+      solution: {
+        pt: [
+          "Sistema com cadastro de produtos, categorias e variações",
+          "Base para pedidos com snapshot das opções escolhidas",
+          "Modelagem pensada para começar simples e crescer depois",
+          "Interface voltada para operação mais rápida"
+        ],
+        en: [
+          "System with products, categories, and variation management",
+          "Order foundation with snapshots of selected options",
+          "Data modeling designed to start simple and grow later",
+          "Interface focused on faster operations"
+        ]
+      },
+      challenges: {
+        pt: [
+          "Modelar variações de produto de forma simples no MVP",
+          "Evitar complexidade excessiva logo na primeira versão",
+          "Manter clareza de uso para operação real",
+          "Pensar a estrutura já pronta para expansão futura"
+        ],
+        en: [
+          "Modeling product variations simply in the MVP",
+          "Avoiding excessive complexity in the first version",
+          "Keeping the product clear enough for real operation",
+          "Designing the structure with future expansion in mind"
+        ]
+      },
+      architecture: {
+        bullets: {
+          pt: [
+            "Catálogo de produtos como base central",
+            "Camada de variações desacoplada e escalável",
+            "Estrutura preparada para persistir escolhas do pedido",
+            "Modelagem orientada a MVP com espaço para evolução"
+          ],
+          en: [
+            "Product catalog as the central foundation",
+            "Decoupled and scalable variations layer",
+            "Structure prepared to persist order choices",
+            "MVP-oriented modeling with room to evolve"
+          ]
+        },
+        pipeline: {
+          nodes: [
+            { pt: "Admin UI", en: "Admin UI" },
+            { pt: "Catálogo de produtos", en: "Product Catalog" },
+            { pt: "Camada de variações", en: "Variations Layer" },
+            { pt: "Pedidos", en: "Orders" }
+          ],
+          edges: [
+            [0, 1],
+            [1, 2],
+            [2, 3]
+          ]
+        }
+      },
+      results: {
+        pt: [
+          "Estrutura inicial pronta para operação e expansão",
+          "Modelagem clara para produtos com variações",
+          "Projeto com aderência a uma necessidade real"
+        ],
+        en: [
+          "Initial structure ready for operation and expansion",
+          "Clear modeling for products with variations",
+          "Project aligned with a real operational need"
+        ]
+      },
+      learnings: {
+        pt: [
+          "Projetos reais exigem equilíbrio entre simplicidade e crescimento futuro",
+          "MVP bom não é o que faz tudo, é o que resolve o essencial com clareza",
+          "Modelagem inicial bem feita economiza retrabalho"
+        ],
+        en: [
+          "Real projects require balance between simplicity and future growth",
+          "A good MVP is not the one that does everything, but the one that solves the essential clearly",
+          "A solid initial model reduces rework later"
+        ]
+      }
+    },
+    links: {
+      repo: "https://github.com/vitormtns/fogacaslanchonete",
+      live: "https://fogacaslanchonete.vercel.app/",
+      docs: "#"
+    },
+    media: { cover: true, gallery: 2 }
+  },
+  {
     slug: "bovnex",
+    featured: true,
     title: { pt: "BovNex", en: "BovNex" },
     tagline: {
       pt: "SaaS mobile-first para gestão de rebanho e rotina de campo.",
@@ -173,9 +563,9 @@ export const caseStudies: CaseStudy[] = [
     links: {},
     media: { cover: true, gallery: 6 }
   },
-
   {
     slug: "beta-for-business",
+    featured: false,
     title: { pt: "Beta for Business", en: "Beta for Business" },
     tagline: {
       pt: "Plataforma de atividades e listening para ensino de inglês com painel do aluno e da professora.",
@@ -277,9 +667,9 @@ export const caseStudies: CaseStudy[] = [
     links: {},
     media: { cover: true, gallery: 6 }
   },
-
   {
     slug: "dolmini",
+    featured: false,
     title: { pt: "Dolmini", en: "Dolmini" },
     tagline: {
       pt: "E-commerce WooCommerce com componentes premium e painel administrativo no front-end para cadastro em escala.",
@@ -378,9 +768,9 @@ export const caseStudies: CaseStudy[] = [
     links: {},
     media: { cover: true, gallery: 6 }
   },
-
   {
     slug: "beta-for-teams",
+    featured: false,
     title: { pt: "Beta for Teams / DISC for Teams", en: "Beta for Teams / DISC for Teams" },
     tagline: {
       pt: "SaaS B2B multi-tenant para diagnóstico comportamental e planos de ação em equipes.",
@@ -478,6 +868,8 @@ export const caseStudies: CaseStudy[] = [
     media: { cover: true, gallery: 6 }
   }
 ];
+
+export const featuredCaseStudies = caseStudies.filter((caseStudy) => caseStudy.featured);
 
 export function getCaseStudyBySlug(slug: string): CaseStudy | undefined {
   return caseStudies.find((caseStudy) => caseStudy.slug === slug);

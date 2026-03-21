@@ -5,7 +5,7 @@ import Link from "next/link";
 import Scene, { type SceneTheme } from "@/components/Scene";
 import ProjectCard from "@/components/ProjectCard";
 import type { Language, SiteContent } from "@/lib/i18n";
-import { projects } from "@/lib/projects";
+import { featuredProjects } from "@/lib/projects";
 
 type ScenesProps = {
   lang: Language;
@@ -55,7 +55,7 @@ export default function Scenes({ lang, t, themes, reducedMotion }: ScenesProps) 
         index={1}
       >
         <div className="grid gap-5 md:grid-cols-2">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <ProjectCard
               key={project.slug}
               project={project}
