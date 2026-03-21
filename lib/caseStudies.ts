@@ -2,6 +2,7 @@ export type CaseStudySlug =
   | "nexus-backend"
   | "nexus-frontend"
   | "fogacas-lanchonete"
+  | "retreat-site"
   | "bovnex"
   | "beta-for-business"
   | "dolmini"
@@ -562,6 +563,127 @@ export const caseStudies: CaseStudy[] = [
     },
     links: {},
     media: { cover: true, gallery: 6 }
+  },
+  {
+    slug: "retreat-site",
+    featured: false,
+    title: { pt: "Retiro Regional", en: "Regional Retreat Website" },
+    tagline: {
+      pt: "Landing page para evento com foco em comunicação clara e apresentação visual.",
+      en: "A landing page for an event focused on clear communication and visual presentation."
+    },
+    status: "partial",
+    stackBadges: ["HTML", "CSS", "Landing Page", "Responsive Design", "Static Website", "UX"],
+    heroTheme: { from: "#14181E", to: "#24303F", accent: "rgba(143, 181, 255, 0.18)" },
+    overview: {
+      pt: "Site desenvolvido para apresentação de um evento regional, com foco em clareza das informações, estética visual e facilidade de navegação.",
+      en: "A website built for a regional event, focused on clear information, visual presentation, and simple navigation."
+    },
+    sections: {
+      problem: {
+        pt: {
+          paragraph:
+            "O evento precisava de uma página simples e direta para comunicar informações importantes de forma clara e atrativa.",
+          bullets: [
+            "Organizar informações do evento em uma página única",
+            "Garantir leitura fácil em mobile",
+            "Transmitir identidade visual adequada ao público",
+            "Evitar excesso de complexidade"
+          ]
+        },
+        en: {
+          paragraph:
+            "The event needed a simple and direct page to communicate key information in a clear and engaging way.",
+          bullets: [
+            "Organize event information into a single page",
+            "Ensure easy reading on mobile devices",
+            "Communicate a visual identity that fits the audience",
+            "Avoid unnecessary complexity"
+          ]
+        }
+      },
+      solution: {
+        pt: [
+          "Landing page com estrutura direta e navegação simples",
+          "Seções organizadas com foco em leitura rápida",
+          "Layout responsivo para mobile e desktop",
+          "Design visual alinhado com o contexto do evento"
+        ],
+        en: [
+          "Landing page with a direct structure and simple navigation",
+          "Sections organized for quick reading",
+          "Responsive layout for mobile and desktop",
+          "Visual design aligned with the event context"
+        ]
+      },
+      challenges: {
+        pt: [
+          "Equilibrar simplicidade com identidade visual",
+          "Organizar conteúdo sem sobrecarregar a página",
+          "Garantir boa experiência em diferentes tamanhos de tela"
+        ],
+        en: [
+          "Balancing simplicity with visual identity",
+          "Organizing content without overloading the page",
+          "Ensuring a strong experience across different screen sizes"
+        ]
+      },
+      architecture: {
+        bullets: {
+          pt: [
+            "Estrutura estática com carregamento rápido",
+            "Layout organizado em seções claras",
+            "Estilização focada em legibilidade",
+            "Código simples e direto"
+          ],
+          en: [
+            "Static structure with fast loading",
+            "Layout organized into clear sections",
+            "Styling focused on readability",
+            "Simple and direct code"
+          ]
+        },
+        pipeline: {
+          nodes: [
+            { pt: "UI", en: "UI" },
+            { pt: "Layout", en: "Layout" },
+            { pt: "Assets estáticos", en: "Static Assets" },
+            { pt: "Navegador", en: "Browser" }
+          ],
+          edges: [
+            [0, 1],
+            [1, 2],
+            [2, 3]
+          ]
+        }
+      },
+      results: {
+        pt: [
+          "Página funcional com boa leitura e navegação",
+          "Entrega rápida e objetiva para o evento",
+          "Experiência consistente em mobile"
+        ],
+        en: [
+          "Functional page with clear reading and navigation",
+          "Fast and objective delivery for the event",
+          "Consistent mobile experience"
+        ]
+      },
+      learnings: {
+        pt: [
+          "Simplicidade bem executada resolve mais do que excesso de funcionalidade",
+          "Organização de conteúdo impacta diretamente na experiência",
+          "Responsividade é essencial mesmo em projetos simples"
+        ],
+        en: [
+          "Well-executed simplicity solves more than excess functionality",
+          "Content organization directly shapes the experience",
+          "Responsiveness matters even in simple projects"
+        ]
+      }
+    },
+    links: {},
+    media: { cover: true, gallery: 1 }
   },
   {
     slug: "beta-for-business",
